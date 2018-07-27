@@ -1,4 +1,24 @@
 <resources>
     <string name="app_name">Agrition</string>
     <string name="filter">Filter ></string>
+    <string name="beli">Beli</string>
+    <string name="deskripsi">Pupuk RIA PLUS NPK 16-16-16 dapat menghasilkan tinggi tanaman,
+        jumlah anakan dan bagan warna daun yang lebih tinggi dan banyak dibandingkan dengan perlakuan kontrol.
+        Hal tersebut mendedikasikan bahwa pupuk yang diaplikasikan efektif meningkatkan ketersediaan unsur hara
+        N, P, dan K bagi tanaman.</string>
+    <string-array name="metodebayar">
+        <item>Pilih Metode Pembayaran</item>
+        <item>Saldo Agrition</item>
+        <item>Transfer Bank</item>
+        <item>Indomaret</item>
+        <item>Alfamart</item>
+        <item>Kartu Kredit</item>
+    </string-array>
+    <string-array name="logistik">
+        <item>Pilih Jasa Pengiriman</item>
+        <item>JNE</item>
+        <item>Pos Indonesia</item>
+        <item>J &amp; T</item>
+        <item>Gojek</item>
+    </string-array>
 </resources>

@@ -8,15 +8,20 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class Hasilsearchadapter extends RecyclerView.Adapter<Hasilsearchadapter.ViewHolder> {
 
     private String[] mData = new String[0];
+    private double[] mharga = new double[0];
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
-    Hasilsearchadapter(Context context, String[] data){
+    Hasilsearchadapter(Context context, String[] data, double[] harga){
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
+        this.mharga = harga;
     }
 
     @Override
@@ -28,6 +33,9 @@ public class Hasilsearchadapter extends RecyclerView.Adapter<Hasilsearchadapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.myTextView.setText(mData[position]);
+        NumberFormat formatter = new DecimalFormat("###,###");
+        String formattedharga = String.valueOf(formatter.format(mharga[position]));
+        holder.mhargaku.setText(formattedharga);
     }
 
     @Override
@@ -38,10 +46,12 @@ public class Hasilsearchadapter extends RecyclerView.Adapter<Hasilsearchadapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView myTextView;
+        public TextView mhargaku;
 
         public ViewHolder(View itemView) {
             super(itemView);
             myTextView = (TextView) itemView.findViewById(R.id.text);
+            mhargaku = (TextView) itemView.findViewById(R.id.hargabarang);
             itemView.setOnClickListener(this);
         }
 
@@ -54,6 +64,7 @@ public class Hasilsearchadapter extends RecyclerView.Adapter<Hasilsearchadapter.
     public String getItem(int id) {
         return mData[id];
     }
+    public double getHarga(int id) {return mharga[id];}
 
     // supaya bisa diklik
     public void setClickListener(ItemClickListener itemClickListener) {

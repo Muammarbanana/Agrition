@@ -25,15 +25,30 @@
                 android:layout_margin="1dp"
                 android:textColor="#A9A9A9"
                 android:textSize="20sp"
-                />
-
-            <TextView
+                android:maxEms="13"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:gravity="left"
-                android:text="Rp. 120.000"
-                android:textColor="#357EC7"
-                android:textSize="18sp" />
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/rupiah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:gravity="left"
+                    android:text="Rp. "
+                    android:textColor="#357EC7"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/hargabarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:gravity="left"
+                    android:textColor="#357EC7"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@+id/rupiah"/>
+            </RelativeLayout>
         </LinearLayout>
 </android.support.v7.widget.CardView>
