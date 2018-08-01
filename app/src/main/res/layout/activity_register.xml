@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.ahmad.agrition.Register">
+
+    <TextView
+        android:text="Registrasi"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/regNama"
+        android:hint="Nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/baseline_person_black_24"
+        android:drawablePadding="8dp"
+        />
+
+    <EditText
+        android:id="@+id/regEmail"
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/baseline_alternate_email_black_24"
+        android:drawablePadding="8dp"
+        />
+
+    <EditText
+        android:id="@+id/regTelp"
+        android:hint="No. Telepon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/baseline_phone_black_24"
+        android:drawablePadding="8dp"
+        />
+
+    <EditText
+        android:id="@+id/regPass"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/baseline_lock_black_24"
+        android:drawablePadding="8dp"
+        />
+
+    <EditText
+        android:id="@+id/regCnfrmPass"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:drawableLeft="@drawable/baseline_lock_black_24"
+        android:drawablePadding="8dp"
+        />
+
+    <Button
+        android:id="@+id/BtnDaftar"
+        android:text="DAFTAR"
+        android:textColor="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackgroundLogin"
+        android:layout_marginBottom="24dp"
+        />
+
+    <Button
+        android:id="@+id/blkLogin"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:text="Sudah registrasi? silakan login disini"
+        android:background="@color/BackgroundLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

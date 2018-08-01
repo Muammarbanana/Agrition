@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ahmad.agrition.Home">
+
+    <LinearLayout
+        android:id="@+id/lytSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackgroundLogin"
+        android:padding="8dp"
+        android:layout_below="@+id/toolbar"
+        >
+
+        <EditText
+            android:id="@+id/etCari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_template"
+            android:padding="5dp"
+            android:drawableRight="@drawable/baseline_search_black_24"
+            android:hint="Cari"
+            android:focusableInTouchMode="false"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@+id/lytSearch">
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gbrGeser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/prdBaru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
