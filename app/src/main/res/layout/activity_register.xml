@@ -74,7 +74,7 @@
         android:textColor="@color/colorWhite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/BackgroundLogin"
+        android:background="@drawable/buttonrounded"
         android:layout_marginBottom="24dp"
         />
 
@@ -82,8 +82,8 @@
         android:id="@+id/blkLogin"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:text="Sudah registrasi? silakan login disini"
-        android:background="@color/BackgroundLogin"
+        android:text="Sudah registrasi? Silakan login disini"
+        android:background="@drawable/buttonrounded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

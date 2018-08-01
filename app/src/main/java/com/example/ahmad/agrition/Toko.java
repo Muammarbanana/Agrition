@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class Toko extends Fragment {
 
     ProdukAdpt prdAdapter;
     RecyclerView rview;
+    EditText et;
 
     public Toko() {
         // Required empty public constructor
@@ -34,6 +36,7 @@ public class Toko extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
         rview = v.findViewById(R.id.prdBaru);
+        et = v.findViewById(R.id.etCari);
         prdAdapter = new ProdukAdpt(getContext());
         prdAdapter.setOnItemClickListener(new ProdukAdpt.OnItemClickListener() {
             @Override
@@ -42,6 +45,13 @@ public class Toko extends Fragment {
                 Intent i = new Intent(getActivity(),Detailproduk.class);
                 i.putExtra("Hargaproduk",String.valueOf(produkModel.getHargaBarang()));
                 i.putExtra("Namaproduk",produkModel.getNamaBarang());
+                startActivity(i);
+            }
+        });
+        et.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),Hasilsearch.class);
                 startActivity(i);
             }
         });

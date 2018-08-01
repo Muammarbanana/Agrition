@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
     android:id="@+id/cv_item">
 
     <LinearLayout
@@ -15,19 +18,44 @@
         <ImageView
             android:id="@+id/gbrProduk"
             android:layout_width="match_parent"
-            android:layout_height="150dp"/>
+            android:layout_height="150dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/borderimage"
+            android:scaleType="centerCrop"/>
 
         <TextView
             android:id="@+id/nmProduk"
             tools:text="pupuk kompos"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/hargaPrd"
-            tools:text="120.000"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="#A9A9A9"
+            android:textSize="20sp"
+            android:maxEms="13"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/rupiah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:gravity="left"
+                android:text="Rp. "
+                android:textColor="#357EC7"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/hargaPrd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:gravity="left"
+                android:textColor="#357EC7"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/rupiah"/>
+        </RelativeLayout>
 
     </LinearLayout>
 
